@@ -18,3 +18,12 @@ En términos de ingenieria:
 
     - Tipado estructural (duck typing): A diferencia de lenguajes como Java (tipado nominal), TypeScript evalúa los tipos por su estructura. Si un objeto tiene las propiedades requeridas, es compatible, independientemente de su origen.
     - Transpilación nula de tipos: El navegador o el entorno de Node.js no ejecutan TypeScript. El código se transpila a JavaScript puro. Las declaraciones de tipos desaparecen en el código resultante, lo que significa que TypeScript no añade sobrecarga de rendimiento en tiempo de ejecución.
+
+
+## Parte 1: Implementación de Lógica Estadística Robusta
+
+Estrategia: Se ha optado por un diseño de funciones puras con control de nulidad explícito.
+
+Tipado: Se utiliza el tipo de unión number | null en lugar de permitir valores NaN o undefined, forzando el uso de guardas de tipo en la capa de presentación.
+
+Verificación: Se confirma que la transpilación a ES2022 mantiene la integridad de la lógica mientras elimina la sobrecarga de tipos en tiempo de ejecución.
