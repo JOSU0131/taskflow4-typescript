@@ -1,0 +1,25 @@
+{
+  "name": "taskflow4-typescript",
+  "version": "1.0.0",
+  "description": "Arquitectura, tipos estrictos, genéricos y laboratorios prácticos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOSU0131/taskflow4-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JOSU0131/taskflow4-typescript/issues"
+  },
+  "homepage": "https://github.com/JOSU0131/taskflow4-typescript#readme",
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

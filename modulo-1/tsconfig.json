@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,               // 🔥 Esto activa el modo difícil/seguro que pide la fase
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",           // Aquí irá el JS procesado
+    "rootDir": "./src",           // Aquí vive tu código TS
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
