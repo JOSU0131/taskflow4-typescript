@@ -210,3 +210,35 @@ Uniones Discriminadas (El concepto clave): Este es el "corazón" de TS avanzado.
 Logro: El compilador sabe que si la matrícula es ACTIVA, tiene asignaturas, y si es FINALIZADA, tiene una nota media. No te deja mezclar peras con manzanas.
 
 Programación Genérica (<T>): Creamos una "maquinaria" que sirve para todo. Tu cliente de API no sabe si está bajando alumnos o cuadros de arte; simplemente sabe que lo que baje tendrá la forma T. Es el máximo nivel de reutilización.
+
+## Paso 0. lab 3
+
+1. El objetivo: "Mantenimiento del Legado"
+
+En el mundo real, a menudo trabajas en un proyecto nuevo (React) pero tienes que volver a una librería antigua (tu lógica de matrículas) para actualizarla.
+
+    TypeScript
+        // En tu Módulo 2 original:
+        export function generarReporte(estado: EstadoMatricula): string {
+        switch (estado.tipo) {
+            case "ACTIVA":
+            return `Activo con ${estado.asignaturas.length} materias.`;
+            case "SUSPENDIDA":
+            return `Pausado por: ${estado.motivo}`;
+            case "FINALIZADA":
+            return `Éxito con nota: ${estado.notaMedia}`;
+            
+            default:
+            // ESTO ES LO QUE PIDE EL LAB 3:
+            const _comprobacion: never = estado;
+            return _comprobacion;
+        }
+        }
+        - - -
+
+
+El Paso 0 sirve para demostrar que:
+
+Sabes refactorizar código existente sin romperlo.
+
+Entiendes que el tipo never es una herramienta de seguridad para el futuro (si mañana añades estados, el código antiguo te avisará).
