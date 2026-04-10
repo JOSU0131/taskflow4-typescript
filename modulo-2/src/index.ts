@@ -10,8 +10,11 @@ function generarReporte(estado: EstadoMatricula): string {
             return `Matrícula pausada. Motivo: ${estado.motivo}`;
         case "FINALIZADA":
             return `Ciclo completado. Nota media: ${estado.notaMedia}`;
-        default:
-            return "Estado desconocido";
+        
+            default:
+            // ESTO ES LO QUE PIDE EL LAB 3:
+            const _comprobacion: never = estado;
+            return _comprobacion;
     }
 }
 
